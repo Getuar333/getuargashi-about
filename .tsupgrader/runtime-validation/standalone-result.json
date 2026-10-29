@@ -1,0 +1,144 @@
+{
+  "planHash": "86295190901befc4b27625e57cdd7bedc297b2b6b0a686d11123b8f7accdc206",
+  "phase": "standalone",
+  "recordedAtUtc": "2026-10-26T15:15:52.0950312Z",
+  "retryCount": 3,
+  "resetBaseline": false,
+  "complete": true,
+  "result": {
+    "setupSucceeded": true,
+    "setupDurationMs": 6783,
+    "setupFailureOutput": null,
+    "assertions": [
+      {
+        "name": "production-build",
+        "kind": "process",
+        "verificationMethod": "exit-code",
+        "passed": true,
+        "timedOut": false,
+        "skipped": false,
+        "skippedReason": null,
+        "exitCode": 0,
+        "outputSample": "\r\n\u003E ethan-vale-portfolio@1.0.0 build\r\n\u003E tsc -b \u0026\u0026 vite build\r\n\r\n\u001B[36mvite v6.4.5 \u001B[32mbuilding for production...\u001B[36m\u001B[39m\r\ntransforming...\r\n\u001B[32m\u2713\u001B[39m 30 modules transformed.\r\nrendering chunks...\r\ncomputing gzip size...\r\n\u001B[2mdist/\u001B[22m\u001B[32mindex.html                 \u001B[39m\u001B[1m\u001B[2m  0.62 kB\u001B[22m\u001B[1m\u001B[22m\u001B[2m \u2502 gzip:  0.38 kB\u001B[22m\r\n\u001B[2mdist/\u001B[22m\u001B[35massets/index-Bs_RG3Wa.css  \u001B[39m\u001B[1m\u001B[2m 31.76 kB\u001B[22m\u001B[1m\u001B[22m\u001B[2m \u2502 gzip:  7.00 kB\u001B[22m\r\n\u001B[2mdist/\u001B[22m\u001B[36massets/index-LGfoWcHA.js   \u001B[39m\u001B[1m\u001B[2m248.65 kB\u001B[22m\u001B[1m\u001B[22m\u001B[2m \u2502 gzip: 77.20 kB\u001B[22m\r\n\u001B[32m\u2713 built in 2.17s\u001B[39m\r\n",
+        "durationMs": 7275
+      },
+      {
+        "name": "tests-pass",
+        "kind": "process",
+        "verificationMethod": "test-results",
+        "passed": true,
+        "timedOut": false,
+        "skipped": false,
+        "skippedReason": null,
+        "exitCode": 0,
+        "outputSample": "\r\n\u003E ethan-vale-portfolio@1.0.0 test\r\n\u003E vitest run\r\n\r\n\r\n RUN  v5.0.5 C:/Users/Plus Computers/getuargashi-about\r\n\r\n\r\n Test Files  1 passed (1)\r\n      Tests  2 passed (2)\r\n   Start at  16:15:48\r\n   Duration  786ms (transform 49%, tests 34%, import 15%, worker 2%)\r\n\r\n",
+        "durationMs": 2246,
+        "testResults": {
+          "testFramework": "vitest",
+          "runnerDetectedFrom": "package_json",
+          "testsTotal": 2,
+          "testsPassed": 2,
+          "testsFailed": 0,
+          "testsSkipped": 0,
+          "parseFailed": false
+        }
+      },
+      {
+        "name": "home-route-200",
+        "kind": "http-probe",
+        "verificationMethod": "http-status",
+        "passed": true,
+        "timedOut": false,
+        "skipped": false,
+        "skippedReason": null,
+        "exitCode": null,
+        "outputSample": "HTTP 200\n\u003C!doctype html\u003E\r\n\u003Chtml lang=\u0022en\u0022\u003E\r\n  \u003Chead\u003E\n    \u003Cscript type=\u0022module\u0022\u003Eimport { injectIntoGlobalHook } from \u0022/@react-refresh\u0022;\ninjectIntoGlobalHook(window);\nwindow.$RefreshReg$ = () =\u003E {};\nwindow.$RefreshSig$ = () =\u003E (type) =\u003E type;\u003C/script\u003E\n\n    \u003Cscript type=\u0022module\u0022 src=\u0022/@vite/client\u0022\u003E\u003C/script\u003E\n\r\n    \u003Cmeta charset=\u0022UTF-8\u0022 /\u003E\r\n    \u003Cmeta name=\u0022viewport\u0022 content=\u0022width=device-width, initial-scale=1.0\u0022 /\u003E\r\n    \u003Cmeta\r\n      name=\u0022description\u0022\r\n      content=\u0022STACKBIT OS v1.0.26 \u2014 an experimental portfolio interface for Ethan Vale.\u0022\r\n    /\u003E\r\n    \u003Cmeta name=\u0022theme-color\u0022 content=\u0022#080A0B\u0022 /\u003E\r\n    \u003Ctitle\u003EEthan Vale | STACKBIT OS v1.0.26\u003C/title\u003E\r\n  \u003C/head\u003E\r\n  \u003Cbody\u003E\r\n    \u003Cdiv id=\u0022root\u0022\u003E\u003C/div\u003E\r\n    \u003Cscript type=\u0022module\u0022 src=\u0022/src/main.tsx\u0022\u003E\u003C/script\u003E\r\n  \u003C/body\u003E\r\n\u003C/html\u003E\r\n\n--- server output ---\n\r\n\u003E ethan-vale-portfolio@1.0.0 dev\r\n\u003E vite --host 127.0.0.1 --port 5178 --strictPort\r\n\r\n\r\n  \u001B[32m\u001B[1mVITE\u001B[22m v6.4.5\u001B[39m  \u001B[2mready in \u001B[0m\u001B[1m515\u001B[22m\u001B[2m\u001B[0m ms\u001B[22m\r\n\r\n  \u001B[32m\u279C\u001B[39m  \u001B[1mLocal\u001B[22m:   \u001B[36mhttp://127.0.0.1:\u001B[1m5178\u001B[22m/\u001B[39m\r\n",
+        "durationMs": 1226
+      },
+      {
+        "name": "home-route-portfolio-title",
+        "kind": "http-probe",
+        "verificationMethod": "output-contains",
+        "passed": true,
+        "timedOut": false,
+        "skipped": false,
+        "skippedReason": null,
+        "exitCode": null,
+        "outputSample": "HTTP 200\n\u003C!doctype html\u003E\r\n\u003Chtml lang=\u0022en\u0022\u003E\r\n  \u003Chead\u003E\n    \u003Cscript type=\u0022module\u0022\u003Eimport { injectIntoGlobalHook } from \u0022/@react-refresh\u0022;\ninjectIntoGlobalHook(window);\nwindow.$RefreshReg$ = () =\u003E {};\nwindow.$RefreshSig$ = () =\u003E (type) =\u003E type;\u003C/script\u003E\n\n    \u003Cscript type=\u0022module\u0022 src=\u0022/@vite/client\u0022\u003E\u003C/script\u003E\n\r\n    \u003Cmeta charset=\u0022UTF-8\u0022 /\u003E\r\n    \u003Cmeta name=\u0022viewport\u0022 content=\u0022width=device-width, initial-scale=1.0\u0022 /\u003E\r\n    \u003Cmeta\r\n      name=\u0022description\u0022\r\n      content=\u0022STACKBIT OS v1.0.26 \u2014 an experimental portfolio interface for Ethan Vale.\u0022\r\n    /\u003E\r\n    \u003Cmeta name=\u0022theme-color\u0022 content=\u0022#080A0B\u0022 /\u003E\r\n    \u003Ctitle\u003EEthan Vale | STACKBIT OS v1.0.26\u003C/title\u003E\r\n  \u003C/head\u003E\r\n  \u003Cbody\u003E\r\n    \u003Cdiv id=\u0022root\u0022\u003E\u003C/div\u003E\r\n    \u003Cscript type=\u0022module\u0022 src=\u0022/src/main.tsx\u0022\u003E\u003C/script\u003E\r\n  \u003C/body\u003E\r\n\u003C/html\u003E\r\n\n--- server output ---\n\r\n\u003E ethan-vale-portfolio@1.0.0 dev\r\n\u003E vite --host 127.0.0.1 --port 5178 --strictPort\r\n\r\n\r\n  \u001B[32m\u001B[1mVITE\u001B[22m v6.4.5\u001B[39m  \u001B[2mready in \u001B[0m\u001B[1m580\u001B[22m\u001B[2m\u001B[0m ms\u001B[22m\r\n\r\n  \u001B[32m\u279C\u001B[39m  \u001B[1mLocal\u001B[22m:   \u001B[36mhttp://127.0.0.1:\u001B[1m5178\u001B[22m/\u001B[39m\r\n",
+        "durationMs": 1608
+      }
+    ],
+    "executions": [
+      {
+        "source": "setup[0]",
+        "resolvedExecutable": "C:\\Program Files\\nodejs\\npm.CMD",
+        "args": [
+          "ci"
+        ],
+        "cwd": "C:\\Users\\Plus Computers\\getuargashi-about",
+        "env": {},
+        "prependPath": [],
+        "platform": "win32"
+      },
+      {
+        "source": "production-build",
+        "resolvedExecutable": "C:\\Program Files\\nodejs\\npm.CMD",
+        "args": [
+          "run",
+          "build"
+        ],
+        "cwd": "C:\\Users\\Plus Computers\\getuargashi-about",
+        "env": {},
+        "prependPath": [],
+        "platform": "win32"
+      },
+      {
+        "source": "tests-pass",
+        "resolvedExecutable": "C:\\Program Files\\nodejs\\npm.CMD",
+        "args": [
+          "test"
+        ],
+        "cwd": "C:\\Users\\Plus Computers\\getuargashi-about",
+        "env": {},
+        "prependPath": [],
+        "platform": "win32"
+      },
+      {
+        "source": "home-route-200",
+        "resolvedExecutable": "C:\\Program Files\\nodejs\\npm.CMD",
+        "args": [
+          "run",
+          "dev",
+          "--",
+          "--host",
+          "127.0.0.1",
+          "--port",
+          "5178",
+          "--strictPort"
+        ],
+        "cwd": "C:\\Users\\Plus Computers\\getuargashi-about",
+        "env": {},
+        "prependPath": [],
+        "platform": "win32"
+      },
+      {
+        "source": "home-route-portfolio-title",
+        "resolvedExecutable": "C:\\Program Files\\nodejs\\npm.CMD",
+        "args": [
+          "run",
+          "dev",
+          "--",
+          "--host",
+          "127.0.0.1",
+          "--port",
+          "5178",
+          "--strictPort"
+        ],
+        "cwd": "C:\\Users\\Plus Computers\\getuargashi-about",
+        "env": {},
+        "prependPath": [],
+        "platform": "win32"
+      }
+    ]
+  }
+}
