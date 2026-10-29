@@ -2,6 +2,8 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import type { ReactNode } from "react";
 import { codeSample, projects, repositories, sections } from "./portfolio-data";
 
+const baseUrl = import.meta.env.BASE_URL;
+
 const principles = [
 
   "Build with clarity",
@@ -538,7 +540,7 @@ function NotFound() {
 
         <p>The requested portfolio route does not exist.</p>
 
-        <a className="button" href="/">RETURN TO PROFILE <ArrowMark /></a>
+        <a className="button" href={baseUrl}>RETURN TO PROFILE <ArrowMark /></a>
 
       </div>
 
@@ -849,7 +851,7 @@ function PortfolioApp() {
 
           ))}
 
-          <a className="button button--mobile-download" href="/documents/CV.pdf" download>
+          <a className="button button--mobile-download" href={`${baseUrl}documents/CV.pdf`} download>
 
             DOWNLOAD CV <ArrowMark />
 
@@ -865,7 +867,7 @@ function PortfolioApp() {
 
         </div>
 
-        <a className="button button--download" href="/documents/CV.pdf" download>
+        <a className="button button--download" href={`${baseUrl}documents/CV.pdf`} download>
 
           DOWNLOAD CV <ArrowMark />
 
@@ -901,7 +903,7 @@ function PortfolioApp() {
 
             <div className="profile-photo-wrap" role="img" aria-label="Getuar Gashi profile portrait">
 
-              <img src="/images/profile-photo.jpg" alt="Getuar Gashi profile portrait" />
+              <img src={`${baseUrl}images/profile-photo.jpg`} alt="Getuar Gashi profile portrait" />
 
               <span className="profile-photo__matrix" aria-hidden="true">
 
@@ -1058,7 +1060,7 @@ function PortfolioApp() {
 
     <div className="education-certificates__menu">
       <a
-        href="/documents/GLOBAL%20UBT%20FEST%202025.pdf"
+        href={`${baseUrl}documents/GLOBAL%20UBT%20FEST%202025.pdf`}
         download="GLOBAL UBT FEST 2025.pdf"
       >
         <span>GLOBAL UBT FEST 2025</span>
@@ -1066,7 +1068,7 @@ function PortfolioApp() {
       </a>
 
       <a
-        href="/documents/Mindluster_Certificate.pdf"
+        href={`${baseUrl}documents/Mindluster_Certificate.pdf`}
         download="Mindluster_Certificate.pdf"
       >
         <span>Mindluster Certificate</span>
@@ -1303,7 +1305,13 @@ function PortfolioApp() {
 }
 
 function App() {
-  if (typeof window !== "undefined" && window.location.pathname !== "/") {
+  const pathname = typeof window === "undefined" ? undefined : window.location?.pathname;
+
+  if (
+    pathname &&
+    pathname !== baseUrl &&
+    pathname !== baseUrl.slice(0, -1)
+  ) {
     return <NotFound />;
   }
 
